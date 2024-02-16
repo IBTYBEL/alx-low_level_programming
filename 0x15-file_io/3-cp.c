@@ -68,7 +68,8 @@ int main(int ac, char **av)
 	fd2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	fd_handle(fd1, fd2, 1, av);
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
-	if (!buffer) {
+	if (!buffer)
+	{
 		return (101);
 	}
 	while ((rsize = read(fd1, buffer, BUFFER_SIZE)) > 0)
@@ -82,9 +83,8 @@ int main(int ac, char **av)
 		}
 		free(buffer);
 		buffer = malloc(sizeof(char) * BUFFER_SIZE);
-		if (!buffer) {
+		if (!buffer)
 			return (101);
-		}
 	}
 	if (rsize == -1)
 	{
