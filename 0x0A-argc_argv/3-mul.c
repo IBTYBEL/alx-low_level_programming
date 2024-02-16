@@ -9,19 +9,19 @@
 static int sign_count(char *s)
 {
 	int i;
-	int s;
+	int si;
 
 	i = 0;
-	s = 0;
+	si = 0;
 	while (s[i] && (s[i] > '9' || s[i] < '0'))
 	{
 		if (s[i] == '-')
 		{
-			s++;
+			si++;
 		}
 		i++;
 	}
-	return (s);
+	return (si);
 }
 
 /**
